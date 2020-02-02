@@ -1,5 +1,5 @@
-import home
+from home import Home
 
 state = "lounge_only"
-house = home.Home()
+house = Home()
 house.set_state(state)
