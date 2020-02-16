@@ -1,14 +1,16 @@
 import requests
 import json
+import os
 
 class Home:
     def __init__(self):
-        with open("config.json") as json_file:
+        print(__file__)
+        with open(os.path.dirname(__file__) + "/config.json") as json_file:
             self.config = json.load(json_file)
             self.ip = self.config["ip_addr"] 
             self.key = self.config["key"]
 
-        with open("states.json") as json_file:
+        with open(os.path.dirname(__file__) + "/states.json") as json_file:
             self.states = json.load(json_file)
 
     def set_state(self, state):
