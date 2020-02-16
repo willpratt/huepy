@@ -4,7 +4,6 @@ import os
 
 class Home:
     def __init__(self):
-        print(__file__)
         with open(os.path.dirname(__file__) + "/config.json") as json_file:
             self.config = json.load(json_file)
             self.ip = self.config["ip_addr"] 
